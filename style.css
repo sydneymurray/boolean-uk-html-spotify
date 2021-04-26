@@ -179,8 +179,8 @@
   }
 
  .listwrap {
-  display: table; /* Allow the centering to work */
-  margin: 0 auto;
+   display: table; /* Allow the centering to work */
+   margin: 0 auto;
   }
   
  .main .section-menu li{
@@ -191,38 +191,10 @@
    background-color: var(--back-ground-colour);;
  }
  .recently-played-heading{
-  grid-area: recently-played-heading;
-  background-color: green;;
-}
+   grid-area: recently-played-heading;
+ }
 
-/* 
-.recently-played{
-    grid-area: recently-played;
-    display: grid;
-    grid-template-columns: repeat(auto,auto);
-    height: auto;
-    grid-auto-flow: column;
-    background-color: var(--back-ground-colour);
-    background-color: white;
-  }
-  .john-smith{
-    grid-area: john-smith;
-    display: grid;
-    grid-template:
-    "album" auto/
-    auto;
-    background-color: var(--back-ground-colour);
-  }
-  .most-popular{
-    grid-area: most-popular;
-    display: grid;
-    grid-template:
-    "album" auto/
-    auto;
-    background-color: var(--back-ground-colour);
-  }
-  */
-  .section-heading{
+ .section-heading{
     /* grid-area: section-heading; */
     font-weight: bold;
     color: white;
@@ -230,9 +202,11 @@
     margin-bottom: 2ch;
     margin-top: 3ch;
   }
-
+  .album-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,198px);   
+  }
   .album{
-    grid-area: album;
     display: grid;
     grid-template:
     "album-cover" 172px
@@ -242,7 +216,6 @@
     background-color: var(--back-ground-colour);
     padding-left: 3ch;
     height:auto;
-    background-color:violet;
     width:198px;
   }
   .album-cover{
@@ -263,11 +236,16 @@
     font-size: 0.8rem;
     padding-top: 1ch;
   }
+  /*
   .sections{
     min-height: 280px;
     max-height: fit-content;
   }
-  
+  */
+  .john-smith{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,198px);   
+  }
 
   /*  ****************************************/  
   .footer{
@@ -364,15 +342,3 @@
   }
 }
 
-
-  /*  ****************************************/ 
-  /* T ****************************************/ 
-  /*  ****************************************/ 
-  /* ****************************************/ 
-  /*  ****************************************/ 
-/*
-  a:hover {
-    text-decoration: none;
-}
-
-*/
